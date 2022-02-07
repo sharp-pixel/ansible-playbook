@@ -16,7 +16,7 @@
   import_tasks: tune.yml
 
 - name: include dashboards installation
-  include: dashboards.yml
+  import_tasks: dashboards.yml
 
 - name: Make sure opensearch dashboards is started
   service:
