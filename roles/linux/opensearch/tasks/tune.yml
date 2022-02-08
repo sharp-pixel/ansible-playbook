@@ -10,3 +10,16 @@
     name: fs.file-max
     value: 65536
     state: present
+
+- name: Set memlock in /etc/security/limits.conf
+  pam_limits:
+    domain: opensearch
+    limit_item: memlock
+    limit_type: soft
+    value: unlimited
+    
+  pam_limits:
+    domain: opensearch
+    limit_item: memlock
+    limit_type: hard
+    value: unlimited

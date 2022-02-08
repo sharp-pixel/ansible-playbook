@@ -16,10 +16,10 @@
   import_tasks: tune.yml
 
 - name: include opensearch installation
-  include: opensearch.yml
+  include_tasks: opensearch.yml
 
 - name: include security plugin for opensearch
-  include: security.yml
+  include_tasks: security.yml
 
 # After the cluster forms successfully for the first time,
 # remove the cluster.initial_master_nodes setting from each nodes' configuration.
