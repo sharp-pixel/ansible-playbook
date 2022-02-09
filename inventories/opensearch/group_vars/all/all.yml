@@ -28,3 +28,7 @@ cluster_type: multi-node
 os_user: opensearch
 
 os_dashboards_user: opensearch-dashboards
+
+ansible_ssh_private_key_file: /home/ec2-user/environment/opensearch-key.pem
+ansible_user: ec2-user
+ansible_become: true
