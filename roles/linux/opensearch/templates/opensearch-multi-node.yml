@@ -13,3 +13,8 @@ discovery.seed_hosts: ["{{ os_nodes }}"]
 cluster.initial_master_nodes: ["{{ os_master_nodes }}"]
 
 node.roles: [{{ hostvars[inventory_hostname]['roles'] }}]
+
+cluster.routing.use_adaptive_replica_selection: true
+cluster.routing.allocation.awareness.attributes: zone
+cluster.search.ignore_awareness_attributes: false
+node.attr.zone: {{ hostvars[inventory_hostname]['az'] }}
